@@ -67,7 +67,7 @@ class EmployeeControllerTest {
         assertNotNull(response.getBody(), "Response body should not be null"); // if null
         EmployeeDTO createdEmployee = response.getBody(); // check whats being sent
         assertNotNull(createdEmployee.getUuid(), "UUID should not be null"); // asures isnt null
-        assertEquals("Glenda", createdEmployee.getFirstName()); // makes sure value match
+        assertEquals("Glinda", createdEmployee.getFirstName()); // makes sure value match
         assertEquals("Witch", createdEmployee.getLastName());
         assertEquals("Glenda Witch", createdEmployee.getFullName());
         assertEquals(75000, createdEmployee.getSalary());
@@ -110,7 +110,7 @@ class EmployeeControllerTest {
     @DisplayName("Get by UUID:")
     void testGetEmployeeByUuid_Success() {
         Implementation newEmployee = new Implementation(
-                "Alice", "Wonderland", 85000, 14, "<Magician>", "rabbithole@aol.com", Instant.now(), null);
+                "Alice", "Wonderland", 85000, 14, "Magician", "rabbithole@aol.com", Instant.now(), null);
 
         ResponseEntity<EmployeeDTO> createResponse =
                 restTemplate.postForEntity(baseUrl, newEmployee, EmployeeDTO.class);

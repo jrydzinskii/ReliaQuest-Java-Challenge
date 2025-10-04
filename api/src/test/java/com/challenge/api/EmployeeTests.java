@@ -69,7 +69,7 @@ class EmployeeControllerTest {
         assertNotNull(createdEmployee.getUuid(), "UUID should not be null"); // asures isnt null
         assertEquals("Glinda", createdEmployee.getFirstName()); // makes sure value match
         assertEquals("Witch", createdEmployee.getLastName());
-        assertEquals("Glenda Witch", createdEmployee.getFullName());
+        assertEquals("Glinda Witch", createdEmployee.getFullName());
         assertEquals(75000, createdEmployee.getSalary());
         assertEquals(32, createdEmployee.getAge());
         assertEquals("Headwitch", createdEmployee.getJobTitle());
